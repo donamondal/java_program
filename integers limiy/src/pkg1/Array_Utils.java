@@ -3,9 +3,16 @@ package pkg1;
 public class Array_Utils 
 {
 
-//	CHECKING A ARRAY IS SORTED OR NOT 
-	public static boolean is_sorted(int[] array) {
-		for (int i = 0; i < array.length - 1; i++) {
+	
+	/**
+	 * CHECKING A ARRAY IS SORTED OR NOT
+	 * @param array
+	 * @return
+	 */
+	public static boolean is_sorted(int[] array)
+	{
+		for (int i = 0; i < array.length - 1; i++) 
+		{
 			if (array[i] > array[i + 1]) {
 				return false;
 			}
@@ -13,7 +20,11 @@ public class Array_Utils
 		return true;
 	}
 	
-//	SORTING AN ARRAY
+	/**
+	 * SORTING AN ARRAY
+	 * @param a
+	 * @return
+	 */
 	public static int[] sorting(int[] a)
 	{
 		int t=0;
@@ -31,8 +42,12 @@ public class Array_Utils
 			}
 	  return a;
 	}
-	
-//	FINDING MAX NO. IN A 1D ARRAY	
+		
+	/**
+	 * FINDING MAX NO. IN A 1D ARRAY
+	 * @param array
+	 * @return
+	 */
 	public static int maximum(int[] array)
 	{
        int t=array[0];
@@ -47,7 +62,11 @@ public class Array_Utils
 		return t;
 	}
 	
-//	FINDING MAX NO. IN A 2D ARRAY
+	/**
+	 * FINDING MAX NO. IN A 2D ARRAY
+	 * @param a
+	 * @return
+	 */
 	public static int maximum(int[][] a)
 	{
 		int large=a[0][0];
@@ -65,7 +84,11 @@ public class Array_Utils
 		return large;
 	}
 	
-//	FINDING MIN NO. IN A 1D ARRAY
+	/**
+	 *FINDING MIN NO. IN A 1D ARRAY
+	 * @param array
+	 * @return
+	 */
 	public static int smallest(int[] array)
 	{
 		int temp=0,i=0;
@@ -80,7 +103,11 @@ public class Array_Utils
 		return temp;
 	}
 	
-//	FINDING MIN NO. IN A 2D ARRAY
+	/**
+	 *FINDING MIN NO. IN A 2D ARRAY
+	 * @param a
+	 * @return
+	 */
 	public static int Smallest(int[][] a)
 	{
 
@@ -98,29 +125,45 @@ public class Array_Utils
 		}
 		return min;
 	}
-	
-//	FINDING THE SUM OF ELEMENTS OF 1D ARRAY
+		
+	/**
+	 *FINDING THE SUM OF ELEMENTS OF 1D ARRAY 
+	 * @param a
+	 * @return
+	 */
 	public static int sum(int[] a) 
 	{
 		int sum = 0;
-		for (int i = 0; i < a.length; i++) {
+		for (int i = 0; i < a.length; i++) 
+		{
 			sum += a[i];
 		}
 		return sum;
 	}
 	
-//	FINDING THE SUM OF 
-	public static int sum(int[][] array) {
+	/**
+	 *FINDING THE SUM OF  
+	 * @param array
+	 * @return
+	 */
+	public static int sum(int[][] array) 
+	{
 		int total = 0;
-		for (int r = 0; r < array.length; r++) {
-			for (int c = 0; c < array[r].length; c++) {
+		for (int r = 0; r < array.length; r++) 
+		{
+			for (int c = 0; c < array[r].length; c++) 
+			{
 				total += array[r][c];
 			}
 		}
 		return total;
 	}
 	
-//	STORING ARRAY ELEMENTS UPTO A LIMIT
+	/**
+	 *STORING ARRAY ELEMENTS UPTO A LIMIT 
+	 * @param a
+	 * @return
+	 */
 	public static int arrayLimit(int[] a)
 	{
 		int bag=123,total=0;
@@ -146,6 +189,7 @@ public class Array_Utils
 				else
 					break;
 			}
+		return total;	
 	}
 
 }	

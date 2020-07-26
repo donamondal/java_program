@@ -100,7 +100,8 @@ public class Array_Utils
 	}
 	
 //	FINDING THE SUM OF ELEMENTS OF 1D ARRAY
-	public static int sum(int[] a) {
+	public static int sum(int[] a) 
+	{
 		int sum = 0;
 		for (int i = 0; i < a.length; i++) {
 			sum += a[i];
@@ -117,6 +118,34 @@ public class Array_Utils
 			}
 		}
 		return total;
+	}
+	
+//	STORING ARRAY ELEMENTS UPTO A LIMIT
+	public static int arrayLimit(int[] a)
+	{
+		int bag=123,total=0;
+		for(int i=0;i<a.length;i++)
+		{ 
+			int b=total;
+			total+=a[i];
+			if(total==bag)
+			{
+				break;
+			}
+			else if(total>bag)
+			{
+				total=b;
+				break;
+			}
+		}
+			total = 0;
+			for(int i=0;i<a.length;i++)
+			{ 
+				if((total + a[i]) <= bag)
+					total += a[i];
+				else
+					break;
+			}
 	}
 
 }	

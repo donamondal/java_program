@@ -28,14 +28,36 @@ public class Array_Utils
 				array[i]=n;
 				size+=1;
 			}
-		}	
-		System.out.println("entered array\n");
-		
+		}
+		int[] finalA=duplicate_array(array,size);
+		return finalA;
+	}
+	
+	/**
+	 * DUPLICATE AN ARRAY
+	 * @param real
+	 * @param size
+	 * @return
+	 */
+	public static int[] duplicate_array(int[] real,int size)
+	{
+		int[] duplicate=new int[size];
+		copy_array(real,duplicate,size);
+		return duplicate;
+	}
+	
+	/**
+	 * COPY AN ARRAY
+	 * @param source
+	 * @param destination
+	 * @param size
+	 */
+	public static void copy_array(int[] source,int[] destination,int size)
+	{
 		for(int i=0;i<size;i++)
 		{
-			System.out.println(array[i]);
+			destination[i]=source[i];
 		}
-		return array;
 	}
 	
 	/**

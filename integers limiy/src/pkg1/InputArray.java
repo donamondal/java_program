@@ -4,6 +4,21 @@ import java.util.Scanner;
 public class InputArray 
 {	
 	
+	public static int[] duplicate_array(int[] real,int size)
+	{
+		int[] duplicate=new int[size];
+		copy_array(real,duplicate,size);
+		return duplicate;
+	}
+	
+	public static void copy_array(int[] source,int[] destination,int size)
+	{
+		for(int i=0;i<size;i++)
+		{
+			destination[i]=source[i];
+		}
+	}
+	
 	public static int[] inputArray()
 	{
 		int[] array =new int[100];
@@ -23,15 +38,21 @@ public class InputArray
 				array[i]=n;
 				size+=1;
 			}
-		}	
-		return array;
+		}
+		int[] finalA=duplicate_array(array,size);
+		return finalA;
 	}
 	
 	public static void main(String[] args)
 	{
 		int t[]=inputArray();	
 		System.out.println("entered array\n");
-		System.out.println(t);
+		for(int i=0;i<t.length;i++)
+		{
+			System.out.println(t[i]);
+		}
+		
+		
 	}
 }
 

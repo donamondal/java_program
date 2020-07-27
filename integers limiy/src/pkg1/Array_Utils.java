@@ -1,8 +1,42 @@
 package pkg1;
 
+import java.util.Scanner;
+
 public class Array_Utils 
 {
-
+   
+	/**
+     * TAKING INPUT OF ARRAY ELEMENTS
+     * @return
+     */
+	public static int[] inputArray()
+	{
+		int[] array =new int[100];
+		int size=0,n=0;
+		Scanner in = new Scanner(System.in);
+		System.out.println("Enter elements (you can enter upto 100 elements)");
+		System.out.println("press 999 if you want to stop entering");
+		for(int i=0;i<array.length;i++)
+		{
+			n= in.nextInt();
+			if(n==999)
+			{
+				break;
+			}
+			else
+			{
+				array[i]=n;
+				size+=1;
+			}
+		}	
+		System.out.println("entered array\n");
+		
+		for(int i=0;i<size;i++)
+		{
+			System.out.println(array[i]);
+		}
+		return array;
+	}
 	
 	/**
 	 * CHECKING A ARRAY IS SORTED OR NOT
@@ -21,7 +55,7 @@ public class Array_Utils
 	}
 	
 	/**
-	 * SORTING AN ARRAY
+	 * SORTING AN ARRAY USING BUBBLE SORT
 	 * @param a
 	 * @return
 	 */
@@ -191,5 +225,45 @@ public class Array_Utils
 			}
 		return total;	
 	}
+	
+	/**
+	 *SORTING AND STORING ARRAY UPTO A LIMIT
+	 * @param a
+	 * @return
+	 */
+	public static int limitedstore(int[] a)
+	{
+		int bag=180,t=0;
+		for(int j=0;j<a.length-1;j++)
+		{
+			for (int i=0;i<a.length-1;i++)
+			{
+				if (a[i] > a[i + 1]) 
+					{
+						t = a[i];
+						a[i] = a[i + 1];
+						a[i + 1] = t;
+					}
+			}
+		}
+		int sum =0;
+		for(int i = 0;i<a.length;i++)
+			{
+			sum+=a[i];
+				System.out.println(a[i]+ " " + sum);
+			}
+		
+		int total=0;
+		for(int i=0;i<a.length;i++)
+		{
+			if(total+a[i]<=bag)
+				total+=a[i];
+			else
+				break;
+		}
+		return total;
+	}
 
-}	
+}
+
+

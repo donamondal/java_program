@@ -60,6 +60,61 @@ public class Array_Utils
 		}
 	}
 	
+	
+	/**
+	 * REVERSE AN ARRAY
+	 * @param array
+	 */
+	public static void reverse_array(int[] array) 
+	{
+		int t=0;
+		int y=array.length-1;
+		for(int i=0;i<array.length/2;i++)
+		{
+			t = array[i];
+			array[i] = array[y];
+			array[y] = t;
+			y--;
+		}
+	}
+	
+	/**
+	 *TO CHECK A PERTICULAR ELEMENT IS PRESENT IN AN ARRAY
+	 * @param array
+	 * @param num
+	 * @return
+	 */
+	public static boolean is_present(int[] array , int num)
+	{
+		for(int i=0;i<array.length;i++)
+		{
+			if(array[i]==num)
+			{
+				return true;
+			}
+		}
+		return false;
+	}
+	
+	/**
+	 * TOTAL NO. OF OCCURENCE OF AN ELEMENT IN ARRAY
+	 * @param array
+	 * @param num
+	 * @return
+	 */
+	public static int total_occurences(int[] array , int num)
+	{
+		int total=0;
+		for(int i=0;i<array.length;i++)
+		{
+			if(array[i]==num)
+			{
+				total+=1;
+			}
+		}
+		return total;
+	}
+	
 	/**
 	 * CHECKING A ARRAY IS SORTED OR NOT
 	 * @param array

@@ -8,10 +8,6 @@ public class Reverse_array
 		int y=array.length-1;
 		for(int i=0;i<array.length/2;i++)
 		{
-//			if(i==y || y==i-1)
-//			{
-//				break;
-//			}
 			t = array[i];
 			array[i] = array[y];
 			array[y] = t;

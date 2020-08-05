@@ -271,6 +271,30 @@ public class Array_Utils
 	}
 	
 	/**
+	 * CHECKING AN ARRAY OF NO.S IS PALINDROME OR NOT
+	 * @param array
+	 * @return
+	 */
+	public static boolean palindrome_num(int[] array) 
+	{
+		int t=0;
+		int y=array.length-1;
+		for(int i=0;i<array.length/2;i++)
+		{
+			if(array[i]==array[y])
+			{
+				y--;
+			}
+			else
+			{
+				return false;
+			}
+		}
+		return true;
+	}
+	
+	
+	/**
 	 *STORING ARRAY ELEMENTS UPTO A LIMIT 
 	 * @param a
 	 * @return

@@ -270,18 +270,68 @@ public class Array_Utils
 		return total;
 	}
 	
+		/**
+		 * REVERSE A NO.
+		 * @param n
+		 * @return
+		 */
+		public static int reverse(int n)
+		{
+			int t=0,r=0;
+			while(n!=0)
+			{
+				r=n%10;
+				t=t*10+r;
+				n=n/10;
+			}
+			System.out.println(t);
+			return t;
+		}
+		
+		/**
+		 * CHECK A NUMBER IN PALINDROME OR NOT
+		 * @param n
+		 * @return
+		 */
+		public static boolean palindrome_num(int n)
+		{
+			return reverse(n)==n;
+		}
+	
 	/**
 	 * CHECKING AN ARRAY OF NO.S IS PALINDROME OR NOT
 	 * @param array
 	 * @return
 	 */
-	public static boolean palindrome_num(int[] array) 
+	public static boolean palindrome_array(int[] array) 
 	{
 		int t=0;
 		int y=array.length-1;
 		for(int i=0;i<array.length/2;i++)
 		{
 			if(array[i]==array[y])
+			{
+				y--;
+			}
+			else
+			{
+				return false;
+			}
+		}
+		return true;
+	}
+	
+	/**
+	 * CHECKING A STRING IS PALINDROME OR NOT
+	 * @param a
+	 * @return
+	 */
+	public static boolean palindrome_string(String a) 
+	{
+		int y=a.length()-1;
+		for(int i=0;i<a.length()/2;i++)
+		{
+			if(a.charAt(i)==a.charAt(y))
 			{
 				y--;
 			}

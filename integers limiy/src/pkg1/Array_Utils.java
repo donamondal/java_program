@@ -132,11 +132,11 @@ public class Array_Utils
 	}
 	
 	/**
-	 * SORTING AN ARRAY USING BUBBLE SORT
+	 * SORTING AN ARRAY IN ASCENDING USING BUBBLE SORT
 	 * @param a
 	 * @return
 	 */
-	public static int[] sorting(int[] a)
+	public static int[] sort_Asc(int[] a)
 	{
 		int t=0;
 	  for (int j = 0; j < a.length- 1; j++)
@@ -153,7 +153,30 @@ public class Array_Utils
 			}
 	  return a;
 	}
-		
+	
+	/**
+	 * SORTING AN ARRAY IN DESCENDING USING BUBBLE SORT
+	 * @param a
+	 * @return
+	 */
+	public static int[] sort_Desc(int[] a)
+	{
+		int t=0;
+	  for (int j = 0; j < a.length- 1; j++)
+		{
+		     for (int i = 0; i < a.length - 1; i++) 
+				{
+					if (a[i] < a[i + 1]) 
+					{
+						t = a[i];
+						a[i] = a[i + 1];
+						a[i + 1] = t;
+					}
+				}
+			}
+	  return a;
+	}
+	
 	/**
 	 * FINDING MAX NO. IN A 1D ARRAY
 	 * @param array

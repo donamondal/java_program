@@ -2,6 +2,10 @@ package pkg1;
 
 import java.util.Scanner;
 
+//counting no. of digits on a number
+//int size =(int) Math.log10(n) + 1;
+	
+
 public class Array_Utils 
 {
    
@@ -133,30 +137,30 @@ public class Array_Utils
 	
 	/**
 	 * SORTING AN ARRAY IN ASCENDING USING BUBBLE SORT
-	 * @param a
+	 * @param array
 	 * @return
 	 */
-	public static int[] sort_Asc(int[] a)
+	public static int[] sort_Asc(int[] array)
 	{
 		int t=0;
-	  for (int j = 0; j < a.length- 1; j++)
+	  for (int j = 0; j < array.length- 1; j++)
 		{
-		     for (int i = 0; i < a.length - 1; i++) 
+		     for (int i = 0; i < array.length - 1; i++) 
 				{
-					if (a[i] > a[i + 1]) 
+					if (array[i] > array[i + 1]) 
 					{
-						t = a[i];
-						a[i] = a[i + 1];
-						a[i + 1] = t;
+						t = array[i];
+						array[i] = array[i + 1];
+						array[i + 1] = t;
 					}
 				}
 			}
-	  return a;
+	  return array;
 	}
 	
 	/**
 	 * SORTING AN ARRAY IN DESCENDING USING BUBBLE SORT
-	 * @param a
+	 * @param a-array
 	 * @return
 	 */
 	public static int[] sort_Desc(int[] a)
@@ -198,7 +202,7 @@ public class Array_Utils
 	
 	/**
 	 * FINDING MAX NO. IN A 2D ARRAY
-	 * @param a
+	 * @param a-array
 	 * @return
 	 */
 	public static int maximum(int[][] a)
@@ -239,7 +243,7 @@ public class Array_Utils
 	
 	/**
 	 *FINDING MIN NO. IN A 2D ARRAY
-	 * @param a
+	 * @param a-array
 	 * @return
 	 */
 	public static int Smallest(int[][] a)
@@ -262,7 +266,7 @@ public class Array_Utils
 		
 	/**
 	 *FINDING THE SUM OF ELEMENTS OF 1D ARRAY 
-	 * @param a
+	 * @param a-array
 	 * @return
 	 */
 	public static int sum(int[] a) 
@@ -295,7 +299,7 @@ public class Array_Utils
 	
 		/**
 		 * REVERSE A NO.
-		 * @param n
+		 * @param n-number
 		 * @return
 		 */
 		public static int reverse(int n)
@@ -313,7 +317,7 @@ public class Array_Utils
 		
 		/**
 		 * CHECK A NUMBER IN PALINDROME OR NOT
-		 * @param n
+		 * @param n=number
 		 * @return
 		 */
 		public static boolean palindrome_num(int n)
@@ -369,7 +373,7 @@ public class Array_Utils
 	
 	/**
 	 *STORING ARRAY ELEMENTS UPTO A LIMIT 
-	 * @param a
+	 * @param a-array
 	 * @return
 	 */
 	public static int arrayLimit(int[] a)
@@ -402,7 +406,7 @@ public class Array_Utils
 	
 	/**
 	 *SORTING AND STORING ARRAY UPTO A LIMIT
-	 * @param a
+	 * @param a-array
 	 * @return
 	 */
 	public static int limitedstore(int[] a)

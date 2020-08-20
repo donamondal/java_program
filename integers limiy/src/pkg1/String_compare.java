@@ -5,7 +5,7 @@ public class String_compare
 	
 	public static char[] string_compare1(char[] w1,char[] w2)
 	{
-		int l=(w1.length>w2.length)?w2.length:w.length;
+		int l=(w1.length>w2.length)?w2.length:w1.length;
 		for(int i=0; i<l; i++)
 		{
 			if(w1[i]>w2[i])

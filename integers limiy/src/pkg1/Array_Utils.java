@@ -140,7 +140,7 @@ public class Array_Utils
 	 * @param array
 	 * @return
 	 */
-	public static int[] sort_Asc(int[] array)
+	public static int[] bubbleSort_Asc(int[] array)
 	{
 		int t=0;
 	  for (int j = 0; j < array.length- 1; j++)
@@ -163,7 +163,7 @@ public class Array_Utils
 	 * @param a-array
 	 * @return
 	 */
-	public static int[] sort_Desc(int[] a)
+	public static int[] bubbleSort_Desc(int[] a)
 	{
 		int t=0;
 	  for (int j = 0; j < a.length- 1; j++)
@@ -179,6 +179,29 @@ public class Array_Utils
 				}
 			}
 	  return a;
+	}
+	
+	/**
+	 * SORTING AN ARRAY IN DESCENDING USING SELECTION SORT
+	 * @param array
+	 * @return
+	 */
+	public static int[] selectionSort_Asc(int[] array)
+	{
+		int temp=0;
+		for(int o=0;o<array.length;o++)
+		{
+			for(int i=o+1;i<array.length;i++)
+			{
+				if(array[o]>array[i])
+				{
+   					temp=array[i];
+   					array[i]=array[o];
+   					array[o]=temp;
+				}
+			}
+		}
+		return array;
 	}
 	
 	/**

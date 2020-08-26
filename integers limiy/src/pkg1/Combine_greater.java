@@ -18,7 +18,7 @@ public class Combine_greater
 				a[i]=t;
 			}
 		}
-		int[] m=Array_Utils.sort_Desc(a);
+		int[] m=Array_Utils.bubbleSort_Desc(a);
 		int r=0;
 		for(int i=0;i<m.length;i++)
 		{

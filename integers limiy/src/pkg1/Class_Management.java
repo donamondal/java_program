@@ -22,6 +22,25 @@ public class Class_Management
 		return (n1.length()>n2.length())?true:false;
 	}
 	
+	public static boolean if_same(String n1,String n2)
+	{
+
+		n1=n1.toUpperCase();
+		n2=n2.toUpperCase();
+		int c=1;
+		if(n1.length()==n2.length())
+		{
+			for(int i=0;i<n1.length();i++)
+			{
+				if(n1.charAt(i)==n2.charAt(i))
+				{
+					c+=1;
+				}
+			}
+		}
+		return (c==n1.length())?true:false;
+	}
+	
 	
 	
 	public static void firstName_compare(String[][] student)
@@ -31,6 +50,20 @@ public class Class_Management
 		{
 			for(int r=0;r<student.length-1;r++)
 			{
+				boolean co=if_same(student[r][0],student[r+1][0]);
+				if(co==true)
+				{
+					lastName_compare(student);
+				}
+//			}
+//		}	
+//		
+//		for(int i=0;i<student.length;i++)
+//		{
+//			for(int r=0;r<student.length-1;r++)
+//			{
+			else
+			{		
 				boolean com=name_compare(student[r][0],student[r+1][0]);
 				if(com==true)
 				{	for(int c=0;c<student[r].length;c++)
@@ -41,8 +74,10 @@ public class Class_Management
 					}
 				}
 			}	
-		}	
+//			}	
+	}	
 	}
+		}
 	
 	public static void lastName_compare(String[][] student)
 	{
@@ -82,8 +117,8 @@ public class Class_Management
 				{"Fili","Fas"},
 				{"Billi","Bhas"},
 				{"Ele","Ehant"},
-				{"Abacusa","Aaasa"}};
-		lastName_compare(stud);
+				{"Abacus","Aaasa"}};
+		firstName_compare(stud);
 		int roll=0;
 		for(int r=0;r<stud.length;r++)
 		{	

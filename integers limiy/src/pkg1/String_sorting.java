@@ -22,17 +22,15 @@ public class String_sorting
 		return (w1.length()>w2.length())?true:false;
 	}
 	
-	
-	public static void main(String[] args)
+	public static void string_sorting(String[] words)
 	{
-		String[] words= {"START","END","ART","CART","aRTIST"};
 		String temp;
 		for(int i=0;i<words.length-1;i++)
 		{
 			for(int j=0;j<words.length-1;j++)
 			{
 				boolean call=compare(words[j],words[j+1]);
-				if(call==true)
+				if(call==false)
 				{
 					temp=words[j+1];
 					words[j+1]=words[j];
@@ -40,6 +38,12 @@ public class String_sorting
 				}
 			}
 		}
+	}
+	
+	public static void main(String[] args)
+	{
+		String[] words= {"START","END","ART","CART","aRTIST"};
+		string_sorting(words);
 		for(int i=0;i<words.length;i++)
 		{
 			System.out.println(words[i]);

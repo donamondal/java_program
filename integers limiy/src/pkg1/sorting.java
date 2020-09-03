@@ -20,6 +20,8 @@ public class sorting
 		return array;
 	}
 	
+	
+	
 	public static void main(String[] args)
 	{
 		int[] a= {6,5,4,3,2,1};

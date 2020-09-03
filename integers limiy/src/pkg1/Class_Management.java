@@ -50,20 +50,6 @@ public class Class_Management
 		{
 			for(int r=0;r<student.length-1;r++)
 			{
-				boolean co=if_same(student[r][0],student[r+1][0]);
-				if(co==true)
-				{
-					lastName_compare(student);
-				}
-//			}
-//		}	
-//		
-//		for(int i=0;i<student.length;i++)
-//		{
-//			for(int r=0;r<student.length-1;r++)
-//			{
-			else
-			{		
 				boolean com=name_compare(student[r][0],student[r+1][0]);
 				if(com==true)
 				{	for(int c=0;c<student[r].length;c++)
@@ -74,9 +60,7 @@ public class Class_Management
 					}
 				}
 			}	
-//			}	
 	}	
-	}
 		}
 	
 	public static void lastName_compare(String[][] student)
@@ -117,7 +101,7 @@ public class Class_Management
 				{"Fili","Fas"},
 				{"Billi","Bhas"},
 				{"Ele","Ehant"},
-				{"Abacus","Aaasa"}};
+				{"Abacusa","Aaasa"}};
 		firstName_compare(stud);
 		int roll=0;
 		for(int r=0;r<stud.length;r++)

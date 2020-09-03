@@ -2,12 +2,9 @@ package pkg1;
 
 import java.util.Scanner;
 
-//counting no. of digits on a number
-//int size =(int) Math.log10(n) + 1;
-	
-
 public class Array_Utils 
 {
+	
    
 	/**
      * TAKING INPUT OF ARRAY ELEMENTS
@@ -18,11 +15,12 @@ public class Array_Utils
 		int[] array =new int[100];
 		int size=0,n=0;
 		Scanner in = new Scanner(System.in);
-		System.out.println("Enter elements (you can enter upto 100 elements)");
+		System.out.println("Enter elements (you can enter upto 100 elements");
 		System.out.println("press 999 if you want to stop entering");
 		for(int i=0;i<array.length;i++)
 		{
 			n= in.nextInt();
+			in.close();
 			if(n==999)
 			{
 				break;
@@ -136,6 +134,35 @@ public class Array_Utils
 	}
 	
 	/**
+	 * SWAPING USING 3RD VARIABLE 
+	 * @param array
+	 */
+	public static void with3rdVariable(int[] array)
+	{
+		int temp=0;
+		for(int i=0;i<array.length-1;i++)
+		{
+			temp = array[i];
+			array[i] = array[i + 1];
+			array[i + 1] = temp;
+		}
+	}
+	
+	/**
+	 * SWAPING WITHOUT USING 3RD VARIABLE 
+	 * @param array
+	 */
+	public static void no3rdVariable(int[] array)
+	{
+		for(int i=0;i<array.length-1;i++)
+		{
+			array[i]=array[i]+array[i+1];
+			array[i+1]=array[i]-array[i+1];
+			array[i]=array[i]-array[i+1];
+		}
+	}
+	
+	/**
 	 * SORTING AN ARRAY IN ASCENDING USING BUBBLE SORT
 	 * @param array
 	 * @return
@@ -194,6 +221,29 @@ public class Array_Utils
 			for(int i=o+1;i<array.length;i++)
 			{
 				if(array[o]>array[i])
+				{
+   					temp=array[i];
+   					array[i]=array[o];
+   					array[o]=temp;
+				}
+			}
+		}
+		return array;
+	}
+	
+	/**
+	 * SORTING AN ARRAY IN ASCENDING USING SELECTION SORT
+	 * @param array
+	 * @return
+	 */
+	public static int[] selectionSort_Desc(int[] array)
+	{
+		int temp=0;
+		for(int o=0;o<array.length;o++)
+		{
+			for(int i=o+1;i<array.length;i++)
+			{
+				if(array[o]<array[i])
 				{
    					temp=array[i];
    					array[i]=array[o];
@@ -303,7 +353,7 @@ public class Array_Utils
 	}
 	
 	/**
-	 *FINDING THE SUM OF  
+	 *FINDING THE SUM OF ELEMENTS OF 2D ARRAY	
 	 * @param array
 	 * @return
 	 */
@@ -320,33 +370,6 @@ public class Array_Utils
 		return total;
 	}
 	
-		/**
-		 * REVERSE A NO.
-		 * @param n-number
-		 * @return
-		 */
-		public static int reverse(int n)
-		{
-			int t=0,r=0;
-			while(n!=0)
-			{
-				r=n%10;
-				t=t*10+r;
-				n=n/10;
-			}
-			System.out.println(t);
-			return t;
-		}
-		
-		/**
-		 * CHECK A NUMBER IN PALINDROME OR NOT
-		 * @param n=number
-		 * @return
-		 */
-		public static boolean palindrome_num(int n)
-		{
-			return reverse(n)==n;
-		}
 	
 	/**
 	 * CHECKING AN ARRAY OF NO.S IS PALINDROME OR NOT
@@ -370,29 +393,7 @@ public class Array_Utils
 		}
 		return true;
 	}
-	
-	/**
-	 * CHECKING A STRING IS PALINDROME OR NOT
-	 * @param a
-	 * @return
-	 */
-	public static boolean palindrome_string(String a) 
-	{
-		int y=a.length()-1;
-		for(int i=0;i<a.length()/2;i++)
-		{
-			if(a.charAt(i)==a.charAt(y))
-			{
-				y--;
-			}
-			else
-			{
-				return false;
-			}
-		}
-		return true;
-	}
-	
+		
 	
 	/**
 	 *STORING ARRAY ELEMENTS UPTO A LIMIT 

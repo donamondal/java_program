@@ -378,7 +378,6 @@ public class Array_Utils
 	 */
 	public static boolean palindrome_array(int[] array) 
 	{
-		int t=0;
 		int y=array.length-1;
 		for(int i=0;i<array.length/2;i++)
 		{
